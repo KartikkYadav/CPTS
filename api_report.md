@@ -8,7 +8,7 @@
             "name": "rohan"
           }
 
-yah diya to normal user admin ban gya 
+yah diya OR PUT diya to normal user admin ban gya 
 
 .<img width="1507" height="870" alt="Screenshot From 2026-04-26 16-49-08" src="https://github.com/user-attachments/assets/537a3930-ebfd-4574-8feb-69da5d40a839" />
 
