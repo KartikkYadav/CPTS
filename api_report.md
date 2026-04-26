@@ -23,6 +23,7 @@ vulnerable  image
 
 
 ---------------------------------------------------------
+
 # Vulnerablity 2 
 
 ISME xss mila h mene phle register kiya jisme mene name me  xss ka payload diya jo ki admin panel me show ho rha h bin aka encode k agar admin apne browser me users ki list dekhega to hum uski documnet cookie ko grep karsakte h to yah xss h 
