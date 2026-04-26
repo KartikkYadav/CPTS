@@ -23,3 +23,10 @@ vulnerable  image
 
 
 ---------------------------------------------------------
+# Vulnerablity 2 
+
+ISME xss mila h mene phle register kiya jisme mene name me  xss ka payload diya jo ki admin panel me show ho rha h bin aka encode k agar admin apne browser me users ki list dekhega to hum uski documnet cookie ko grep karsakte h to yah xss h 
+
+<img width="1507" height="870" alt="Screenshot From 2026-04-26 21-26-41" src="https://github.com/user-attachments/assets/a203cc81-ab58-47d6-9476-2455a9c2cc46" />
+<img width="1507" height="870" alt="Screenshot From 2026-04-26 21-28-07" src="https://github.com/user-attachments/assets/d23d49e8-4bac-4529-8674-0fead4f1c7a7" />
+<img width="1507" height="870" alt="Screenshot From 2026-04-26 21-28-15" src="https://github.com/user-attachments/assets/57b90206-66c2-4f17-82d3-2faa006868df" />
