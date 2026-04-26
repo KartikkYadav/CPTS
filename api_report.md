@@ -31,7 +31,7 @@ ISME xss mila h mene phle register kiya jisme mene name me  xss ka payload diya 
 <img width="1507" height="870" alt="Screenshot From 2026-04-26 21-28-07" src="https://github.com/user-attachments/assets/d23d49e8-4bac-4529-8674-0fead4f1c7a7" />
 <img width="1507" height="870" alt="Screenshot From 2026-04-26 21-28-15" src="https://github.com/user-attachments/assets/57b90206-66c2-4f17-82d3-2faa006868df" />
 ----------------------------------------------------------------------------------------------------
-#Vulnerability 3 
+# Vulnerability 3 
 
 1. [CRITICAL] Broken Function Level Authorization (BFLA)
 Vulnerability ID: CWE-285
