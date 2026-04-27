@@ -54,3 +54,25 @@ see
 here
 <img width="1507" height="870" alt="Screenshot From 2026-04-26 22-26-01" src="https://github.com/user-attachments/assets/2039a66d-2357-4e3e-9034-bfa62f859dfd" />
 
+
+## vulnerability 4
+
+📄 Vulnerability Profile: Mass Assignment
+Vulnerability Name: Mass Assignment (Broken Object Property Level Authorization)
+
+CWE: CWE-915 (Improperly Controlled Modification of Object Attributes)
+
+OWASP API Top 10: API3:2023
+
+Affected Parameter: totalPrice in POST /api/orders/
+
+🛠️ Proof of Concept (PoC)
+Attacker captures the order request using a proxy (like Burp Suite).
+
+Attacker adds or modifies the "totalPrice": 1 field in the JSON payload.
+
+The server processes the request and responds with 201 Created.
+
+The response metadata explicitly confirms the flaw: "_internalServiceMeta": {"priceSource": "client"}.
+
+<img width="1505" height="746" alt="Screenshot From 2026-04-27 09-58-49" src="https://github.com/user-attachments/assets/7b75370e-1621-4f28-824d-0985543876db" />
