@@ -82,3 +82,39 @@ The response metadata explicitly confirms the flaw: "_internalServiceMeta": {"pr
 Ther is no rate limit on login panel attacker can brute force .
 
 <img width="1502" height="827" alt="Screenshot From 2026-04-27 11-41-47" src="https://github.com/user-attachments/assets/9fd54570-6753-41ef-bba7-ec71c7b84f3a" />
+
+## VULNERABILITY 6
+
+Vulnerability Audit Report: Critical Authorization Bypass
+1. Vulnerability Name
+Broken Object Level Authorization (BOLA) leading to Mass Assignment & Privilege Escalation.
+
+2. Severity: 🔴 CRITICAL (10/10)
+Impact: Ek normal customer kisi bhi user (Owner/Admin) ka sensitive data change kar sakta hai aur apne account ki permissions badha sakta hai.
+
+3. Vulnerability Description
+API endpoint /api/users/<uuid> par authorization check missing hai. Backend server ye verify nahi kar raha ki request bhejne wala user us profile ka asli malik hai ya nahi. Saath hi, server "Mass Assignment" allow kar raha hai, jisse sensitive fields (jaise role, isVerified, _fraudFlag) ko manually update kiya ja sakta hai.
+
+4. Proof of Concept (PoC)
+Target Endpoint: PATCH /api/users/8240627c-e0bf-486d-9409-c2300664e9e1
+
+Attacker Role: Normal Customer
+
+Victim Role: Restaurant Owner (Vikram Rathore)
+
+Payload Sent:
+
+JSON
+
+        {
+          "name": "Vikram Rathore - HACKED",
+          "role": "admin",
+          "isVerified": true,
+          "_fraudFlag": false
+        }
+Response: {"success":true,"message":"Profile updated", ...}
+
+<img width="1511" height="877" alt="Screenshot From 2026-04-27 17-50-38" src="https://github.com/user-attachments/assets/86387f2c-cfdb-4c91-9d48-29d98893a7ba" />
+
+<img width="1509" height="850" alt="Screenshot From 2026-04-27 17-50-59" src="https://github.com/user-attachments/assets/0c7241c5-d295-486f-9571-f73c51226261" />
+
