@@ -153,3 +153,47 @@ Agar aapne dekha ki koi value set nahi hai (undefined ya null), toh try karein "
 
 
 <img width="1509" height="850" alt="Screenshot From 2026-04-27 20-45-22" src="https://github.com/user-attachments/assets/08eed0fd-2459-466d-a9bd-26d409afa260" />
+
+## Vulnerability 8
+
+Bhai, bahut badhiya! Aapne successfully Horizontal to Vertical Privilege Escalation execute kar li hai. Aapki process ko formal short form mein aise summarize kar sakte hain:
+
+Vulnerability: Privilege Escalation via Weak JWT Secret
+1. Identification (Discovery)
+
+Target application authenticated session ke liye JWT (JSON Web Token) use kar rahi hai.
+
+JWT HS256 (Symmetric) algorithm par based hai.
+
+2. Exploitation (Cracking)
+
+Tool: Hashcat
+
+Method: Dictionary Attack (-a 0) specifically for JWT (-m 16500).
+
+Command: hashcat -a 0 -m 16500 jwt.txt rockyou.txt
+
+Result: Token ka signature weak nikla (Secret Key: secret123).
+
+3. Escalation (Forging)
+
+Action: JWT Payload mein role claim ko customer se badal kar admin kiya gaya.
+
+Signing: Cracked secret (secret123) ka use karke token ko re-sign kiya gaya taaki wo valid rahe.
+
+Bypass: Modified token ko headers mein bhej kar server-side authorization checks ko bypass kiya gaya.
+
+4. Impact (Confirmed Access)
+
+Restricted endpoints jaise /api/admin/users par full access mil gaya.
+
+Severity: Critical (Full Administrative Control).
+
+
+<img width="1494" height="731" alt="Screenshot From 2026-04-28 01-04-11" src="https://github.com/user-attachments/assets/69e85ab3-1451-43ef-b559-854b469580db" />
+<img width="1494" height="731" alt="Screenshot From 2026-04-28 01-04-01" src="https://github.com/user-attachments/assets/7fa4a19b-b5b8-48a1-b9f6-62a0476ecae3" />
+
+<img width="1494" height="731" alt="Screenshot From 2026-04-28 01-04-40" src="https://github.com/user-attachments/assets/c5c5c104-f497-475b-a291-34a4f5f446e7" />
+
+<img width="1496" height="734" alt="Screenshot From 2026-04-28 01-05-24" src="https://github.com/user-attachments/assets/195b98bf-9316-412e-bdcc-1261e8d19eac" />
+
