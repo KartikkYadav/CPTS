@@ -118,3 +118,38 @@ Response: {"success":true,"message":"Profile updated", ...}
 
 <img width="1509" height="850" alt="Screenshot From 2026-04-27 17-50-59" src="https://github.com/user-attachments/assets/0c7241c5-d295-486f-9571-f73c51226261" />
 
+
+## Vulnerability  7
+
+
+1. Vulnerability Title
+Improper Input Validation leading to Business Logic Manipulation (Negative Coupon Values)
+
+2. Severity (Impact)
+High / Critical
+
+Reason: Agar ek admin (ya compromised admin account) negative value wala coupon banata hai, toh wo system ke financial calculations ko disrupt kar sakta hai.
+
+Financial Impact: Isse product ki price abnormal tareeqe se badh sakti hai ya (agar logic ulta kaam kare) toh order total negative ho sakta hai, jis se potential revenue loss ya system crash ho sakta hai.
+
+3. Proof of Concept (PoC)
+Aapne jo steps perform kiye hain, unhe aise likhein:
+
+Navigate to the Admin Coupon Creation endpoint (/api/admin/coupons).
+
+Intercept the request using Burp Suite.
+
+Modify the payload to include a negative value: {"value": -10000000000000, "maxTotalUses": -9999}.
+
+Observe that the server returns {"success": true}, confirming the coupon is created in the database with invalid values.
+
+4. Technical Explanation
+Application incoming data ko sanitize nahi kar rahi hai. value field ko sirf integer ya float check kiya ja raha hai, lekin uski Range (e.g., 0 to 100) check nahi ho rahi. Sequelize ya jo bhi ORM use ho raha hai, wo seedha invalid data ko database mein save kar raha hai.
+
+Ek aur "Pro" Tip (Advanced Exploit):
+Agar aapne dekha ki koi value set nahi hai (undefined ya null), toh try karein "No Limit" attack:
+
+"maxTotalUses": 0 ya "maxTotalUses": -1 bhej kar dekhein. Kai baar developers -1 ko "Infinite" maante hain. Agar aisa hua, toh wo coupon kabhi khatam hi nahi hoga!
+
+
+<img width="1509" height="850" alt="Screenshot From 2026-04-27 20-45-22" src="https://github.com/user-attachments/assets/08eed0fd-2459-466d-a9bd-26d409afa260" />
