@@ -76,3 +76,9 @@ The server processes the request and responds with 201 Created.
 The response metadata explicitly confirms the flaw: "_internalServiceMeta": {"priceSource": "client"}.
 
 <img width="1505" height="746" alt="Screenshot From 2026-04-27 09-58-49" src="https://github.com/user-attachments/assets/7b75370e-1621-4f28-824d-0985543876db" />
+
+# Vulnerability 5 
+
+Ther is no rate limit on login panel attacker can brute force .
+
+<img width="1502" height="827" alt="Screenshot From 2026-04-27 11-41-47" src="https://github.com/user-attachments/assets/9fd54570-6753-41ef-bba7-ec71c7b84f3a" />
