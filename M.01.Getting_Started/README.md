@@ -1,4 +1,4 @@
-# M.01 — Getting Started
+# Getting Started - HTB Academy Guide
 
 A foundational collection of **CPTS penetration-testing notes** covering service enumeration, web enumeration, public exploit research, Metasploit, privilege escalation, and Nmap-based network enumeration.
 
