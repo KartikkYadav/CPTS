@@ -1,4 +1,4 @@
-# M.03 — Network Enumeration with Nmap
+# Network Enumeration with Nmap - HTB Academy Guide
 
 A focused CPTS module covering **Nmap fundamentals, port and service discovery, Nmap Scripting Engine (NSE), vulnerability-oriented scanning, and firewall/IDS/IPS evasion labs**.
 
