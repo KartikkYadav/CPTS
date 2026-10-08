@@ -1,4 +1,4 @@
-# File Upload Attacks
+# File Uploads - HTB Academy Guide
 
 ### Overview
 
