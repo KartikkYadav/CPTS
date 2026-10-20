@@ -1,4 +1,4 @@
-# File Transfer - HTB Academy Guide
+# File Transfers - HTB Academy Guide
 
 A practical CPTS module covering **file transfer between Linux and Windows systems** using common protocols, native operating-system tools, PowerShell, and lightweight file-transfer servers.
 
