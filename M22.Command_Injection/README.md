@@ -1,4 +1,4 @@
-# Command Injection
+# Command Injection - HTB Academy Guide
 
 Notes for the Hack The Box Academy CPTS module **Command Injection**. This guide covers the underlying vulnerability, discovery, validation, common payload patterns, filter-bypass concepts, and remediation.
 
