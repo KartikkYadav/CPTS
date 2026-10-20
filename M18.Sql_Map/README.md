@@ -1,4 +1,4 @@
-# SQLMap - HTB Academy Guide
+# SQLMap Essentials- HTB Academy Guide
 
 A focused CPTS module on **SQLMap**, covering SQL Injection detection, DBMS fingerprinting, injection techniques, output interpretation, request handling, authentication context, cookies, custom headers, and complex web/API requests.
 
