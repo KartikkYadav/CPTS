@@ -1,4 +1,4 @@
-# Web Attacks
+# Web Attacks - HTB Academy Guide
 
 Structured notes for the **Web Attacks** section of my Hack The Box Academy CPTS preparation. This README is a navigation and revision guide for understanding common web application attack classes, testing them methodically, recording evidence, and recognizing effective mitigations.
 
