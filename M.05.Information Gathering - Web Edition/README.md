@@ -1,4 +1,4 @@
-# Information Gathering - HTB Academy Guide
+# Information Gathering - Web Edition - HTB Academy Guide
 
 A practical CPTS module focused on **web reconnaissance, WHOIS, DNS enumeration, subdomain discovery, zone transfers, virtual hosts, fingerprinting, crawling, and recon automation**.
 
