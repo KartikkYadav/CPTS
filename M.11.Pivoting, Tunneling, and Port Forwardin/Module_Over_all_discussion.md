@@ -1,0 +1,14 @@
+
+Machine 1 ------Machine 2 ----------Machine 3 
+
+So To make a connection from machine 1  to machinee 2 we will use the following tools :
+
+SSH Dynamic Port forwarding
+Chisel 
+
+In both tools we have to configure proxychains and using proxyshains we an prform our commands.
+
+While in Sshuttle we dont need to configure the proxy chain to create the connection between machine 1 and machine 2 and we can still run our nmap and all 
+
+Alsio remember you will have ssh so you can check the connection from machine 1 to machine 2 its root and ips all .
+
